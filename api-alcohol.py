@@ -16,5 +16,7 @@ def drink_search(drink, method = 's', results=1):
 drink = input("Ingresa la bebida que estas buscando \n")
 num_de_resultados =int(input("cuantos resultados queres?\n"))
 response = drink_search(drink, results=num_de_resultados)
+if num_de_resultados > len(response):
+	num_de_resultados = len(response)
 for i in range(num_de_resultados):
 	print(response[i])
